@@ -1,10 +1,10 @@
-This is a repoository for the code for our CS420 group project.
+This is a repository for the code for our CS420 group project.
+Proposal: https://www.overleaf.com/6844330tfqbfdsqvbtd
+Research Plan: https://www.overleaf.com/6921335qcfnvgsyqtbd
 
 Tasks:
   - Email professor to ask about dynamic MPI (Alina)
-  - Finish and turn in research plan by Friday (everyone)
-      - add details about MPI calls
-      - add discussion of topology
+  - Turn in research plan by Friday (everyone)
   - Develop functions using Open MP over Thanksgiving break
       - LU decomposition (for diagonal A blocks)  -> Alina
       - Invert triangular matrices (for diagonal L and U blocks)  -> Zicheng
