@@ -8,6 +8,6 @@ Tasks:
       - LU.c: LU decomposition (for diagonal A blocks)  -> Alina
       - invert_T.c: Invert triangular matrices (for diagonal L and U blocks)  -> Zicheng
           - use forward and back substitution to solve L(L^-1)=I and U(U^-1)=I
-      - Two versions of matrix multiplication (to get off-diagonal L and U blocks and update A) -> Nora?
-          - product_TA.c: optimize for triangular matrix times regular matrix (L^-1 or U^-1 times A)
-          - product_LU.c: optimize for two triangular matrices (A-LU)
+      - matrix_product.c: Two versions of matrix multiplication (to get off-diagonal L and U blocks and update A) -> Nora?
+          - optimize for triangular matrix times regular matrix (L^-1 or U^-1 times A)
+          - optimize for two triangular matrices (A-LU)
