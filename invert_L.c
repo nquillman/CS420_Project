@@ -5,18 +5,9 @@
 the diagnal blocks of L, which is the first step in solving for the off-diagonal blocks of U. The function will be executed
 on a single processor using OpenMP for parallelization.*/
 
-int main() {
-  
-  return 0;
-}
-
-#include <stdio.h>
-#include <math.h>
-
-
-int main(float* matrix, float* inverse) {
+int main(double* matrix, double* inverse) {
   //matrix[i][j]
-  float temp_sum=0;
+  double temp_sum=0;
   for(int j=0; j<=max;j++)
   {
        inverse[j][j]=1/(matrix[j][j]);
