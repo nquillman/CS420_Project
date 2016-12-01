@@ -1,6 +1,7 @@
 #include <stdio.h>
 #include <stdlib.h>
 #include <math.h>
+#include <omp.h>
 
 /* This function computes the LU decomposition of a matrix block using Guassian elimination. It will be used
 to factor the diagonal blocks of the matrix and it will execute on a single processor using OpenMP for parallelization.
@@ -16,6 +17,7 @@ void LU(double* L, double* U, int N) {
 		L[k*N+k]=1;
 		
 		// eliminate column k in rows i>k
+		#pragma omp parallel
 		for (i=k+1; i<N; i++) {
 			L[i*N+k] = U[i*N+k]/U[k*N+k];
 			U[i*N+k] = 0;
