@@ -16,7 +16,7 @@ void LA(float* L, float* A, float* product, int M, int N, int K) {
     for (j=0; j<N; j++) {
       product[i*N+j]=0;  // initialize
      // iterate along row of L/column of A
-      for (k=0; k<fmax(i+1,K); k++) {
+      for (k=0; k<fmin(i+1,K); k++) {
        product[i*N+j] += L[i*K+k]*A[k*N+j];   // add L[i,k]*A[k,j]
       }
     }
