@@ -16,7 +16,7 @@ void AmLU(float* A, float* L, float* U, int M, int N, int K) {
   for (i=0; i<M; i++) {
     for (j=0; j<N; j++) {
       // iterate along row of L/column of U
-      for (k=0; k<fmin(j+1,i+1); k++) {
+      for (k=0; k<fmin(fmin(i+1,K),j+1); k++) {
        A[i*N+j] -= L[i*K+k]*U[k*N+j];   // subtract L[i,k]*U[k,j]
       }
     }
