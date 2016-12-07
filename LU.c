@@ -8,7 +8,7 @@ to factor the diagonal blocks of the matrix and it will execute on a single proc
 Assume U is initialized with the value of A. */
 
 
-void LU(double* L, double* U, int N) {
+void LU(float* L, float* U, int N) {
 	
 	int i,j,k;
 	
