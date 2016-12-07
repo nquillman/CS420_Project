@@ -1,4 +1,5 @@
 #include <stdio.h>
+#include <stdlib.h>
 #include <math.h>
 
 /* This function computes the product of a lower triangular matrix and an upper triangular matrix, and then subtracts that product
