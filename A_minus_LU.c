@@ -12,6 +12,7 @@ void AmLU(float* A, float* L, float* U, int M, int N, int K) {
 
   // iterate over entries of A
   int i, j ,k;
+  #pragma omp parallel for schedule(guided)
   for (i=0; i<M; i++) {
     for (j=0; j<N; j++) {
       // iterate along row of L/column of U
