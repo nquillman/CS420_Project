@@ -16,7 +16,7 @@ void AU(float* A, float* U, float* product, int M, int N, int K) {
     for (j=0; j<N; j++) {
       product[i*N+j]=0;  // initialize
      // iterate along row of A/column of U
-      for (k=0; k<fmax(j+1,K); k++) {
+      for (k=0; k<fmin(j+1,K); k++) {
        product[i*N+j] += A[i*K+k]*U[k*N+j];   // add A[i,k]*U[k,j]
       }
     }
