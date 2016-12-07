@@ -17,7 +17,7 @@ void LU(float* L, float* U, int N) {
 		L[k*N+k]=1;
 		
 		// eliminate column k in rows i>k
-		#pragma omp parallel
+		#pragma omp parallel for
 		for (i=k+1; i<N; i++) {
 			L[i*N+k] = U[i*N+k]/U[k*N+k];
 			U[i*N+k] = 0;
